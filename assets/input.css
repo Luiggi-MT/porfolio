@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@source "../index.html";
+@theme {
+  --color-primary: #09f;
+  --color-primary-light: #0af;
+  --color-primary-dark: #06c;
+}
+
+@utility social-button {
+  @apply size-12 sm:size-16 flex items-center justify-center rounded-full hover:scale-110 transition-transform;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
